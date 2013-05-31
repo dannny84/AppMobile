@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<meta name="viewport" content="width=devide-width, user-scalable=no" />
+	<link href="css/jquery.mobile.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script>
+	  $(document).bind("mobileinit", 
+					  function () {
+						//Con esta funcion, me sirven los enlaces hacia las graficas
+						$.mobile.ajaxEnabled = false;
+					  }
+	  );
+ 	</script>
+	<script type="text/javascript" src="js/jquery.mobile.js"></script>
+	<title>Banco de la República</title>
+</head>
+<body>
+	
+	<div data-role="page" id="pagina1" data-add-back-btn="true">
+		
+		<div data-role="header" data-theme="a">
+			<h1>BANCO<wbr> DE<wbr> LA<wbr> REPÚBLICA</h1>
+			<a href="index_1.html" data-icon="grid" data-iconpos="notext" data-corners="true" data-shadow="true" data-iconshadow="true" 
+					data-wrapperels="span" class="ui-btn-right" title="Version 2"></a>
+		</div>
+		
+		<div data-role="content" data-theme="b" align="center" class="jqm-content">				
+				
+			<img alt="Banco de la República" src="images/logo.png" />												
+								 
+			
+			<div data-role="collapsible-set" data-inset="false" data-theme="c" data-content-theme="d" data-collapsed-icon="arrow-r" 
+				data-expanded-icon="arrow-d">
+				 <div data-role="collapsible">
+			        <h3>Animated Chart</h3>
+			        <ul data-role="listview">
+			            <li><a href="animatedChart.html" data-transition="slide" >Chart</a></li>
+			        </ul>
+			    </div>
+			    		        
+			    <div data-role="collapsible">
+			        <h3>Cambiaria</h3>
+			        <ul data-role="listview">
+			            <li><a href="trm.html" data-transition="slide" >TRM</a></li>
+			            <li><a href="plantilla.html" >Mercado</a></li>
+			            <li><a href="#" >Opciones BanRep</a></li>
+			        </ul>
+			    </div>
+			    
+			    <div data-role="collapsible">
+			        <h3>Monetaria</h3>
+			        <ul data-role="listview">
+			            <li><a href="#" data-rel="dialog" data-transition="slide">Indicadores</a></li>
+			            <li><a href="#" data-rel="dialog" data-transition="slide">Expansión</a></li>
+			            <li><a href="#" data-rel="dialog" data-transition="slide">Expansión 2</a></li>
+			            <li><a href="#" data-rel="dialog" data-transition="slide">Contracción</a></li>
+			        </ul>
+			    </div>
+			    <div data-role="collapsible">
+			        <h3>Deuda Pública Primaria</h3>
+			        <ul data-role="listview">
+			            <li><a href="#" data-rel="dialog" data-transition="slide">Deuda Pública Primaria</a></li>
+			            <li><a href="#" data-rel="dialog" data-transition="slide">N-D</a></li>
+			        </ul>
+			    </div>
+			    <div data-role="collapsible">
+			        <h3>Deuda Pública Secundaria</h3>
+			        <ul data-role="listview">
+			            <li><a href="#" data-rel="dialog" data-transition="slide">Deuda Pública Secundaria</a></li>
+			            <li><a href="#" data-rel="dialog" data-transition="slide">Mas Información</a></li>
+			        </ul>
+			    </div>
+			    <div data-role="collapsible">
+			        <h3>IBR</h3>
+			        <ul data-role="listview">
+			            <li><a href="#" data-rel="dialog" data-transition="slide">IBR Overnight Nominal</a></li>
+			            <li><a href="#" data-rel="dialog" data-transition="slide">IBR 1 Mes Nominal</a></li>
+			            <li><a href="#" data-rel="dialog" data-transition="slide">IBR 3 Meses Nominal</a></li>
+			        </ul>
+			    </div>			    
+			    
+			</div>			
+		</div>
+		<div data-role="footer" data-theme="a">
+			<h6>Derechos<wbr> Reservados</h6>
+		</div>
+		
+	</div>
+
+</body>
+</html>

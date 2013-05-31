@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<meta name="viewport" content="width=devide-width, user-scalable=no" />
+	<link href="css/jquery.mobile.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script>
+	  $(document).bind("mobileinit", 
+					  function () {
+						//Con esta funcion, me sirven los enlaces hacia las graficas
+						$.mobile.ajaxEnabled = false;
+					  }
+	  );
+ 	</script>
+	<script type="text/javascript" src="js/jquery.mobile.js"></script>
+	<title>Banco de la República</title>
+</head>
+<body>
+	<div data-role="page" id="pagina4" data-quicklinks="true">
+	
+		<div data-role="header" data-theme="a">
+			<h1>BANCO<wbr> DE<wbr> LA<wbr> REPÚBLICA</h1>
+			<a href="index.html" data-icon="bars" data-iconpos="notext" data-corners="true" data-shadow="true" data-iconshadow="true" 
+					data-wrapperels="span" class="ui-btn-right" title="Home"></a>
+		</div>
+		<div data-role="content">	
+			
+			<a data-inline="true" data-rel="back" data-theme="b" 
+				data-role="button" href="index.html" data-corners="false" data-shadow="true" data-iconshadow="false" data-wrapperels="span">
+				Volver</a>
+			
+			
+		</div>
+	</div>
+</body>
+</html>
