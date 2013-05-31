@@ -5,7 +5,7 @@
 
     <title>Banco de la República - Animated Chart</title>
 	<meta charset="ISO-8859-1">
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="viewport" content="width=device-height, user-scalable=no" />
 	<link href="css/jquery.mobile.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="css/jquery.jqplot.min.css" />
     <link type="text/css" rel="stylesheet" href="css/shCoreDefault.min.css" />
@@ -38,8 +38,8 @@
     
         .jqplot-target {
             margin: 20px;
-            height: device-height;
-            width: device-width;
+            height: device-width;
+            width: device-height;
             color: #dddddd;
         }
 
@@ -173,7 +173,7 @@
    
 </head>
 <body>
-	<div data-role="page" id="pagina3">
+	<div data-role="page" id="pagina3" align="justify">
 	
 		<div data-role="header" data-theme="a" data-fullscreen="true" data-position="fixed" >
 			<h1>BANCO<wbr> DE<wbr> LA<wbr> REPÚBLICA</h1>
@@ -183,7 +183,7 @@
 	
 		<div id="example-content">			
 		    <div class="ui-widget ui-corner-all">
-		        <div >
+		        <div class="ui-widget-content ui-corner-bottom">
 		            <div id="chart1"></div>
 		        </div>
 		    </div>

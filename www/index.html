@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title>Banco de la República</title>
 	<meta charset="ISO-8859-1">
 	<meta name="viewport" content="width=devide-width, user-scalable=no" />
 	<link href="css/jquery.mobile.css" rel="stylesheet" type="text/css">
@@ -14,19 +15,44 @@
 	  );
  	</script>
 	<script type="text/javascript" src="js/jquery.mobile.js"></script>
-	<title>Banco de la República</title>
+	
+	<style type="text/css">
+		
+	.fit-content, .bottom-footer {
+	        position : absolute;
+	    }
+	    
+	    .fit-content {
+	        top : 44px;
+	        bottom : 44px;
+	        left : 0;
+	        right : 0;
+    	}
+    	
+    	.fit-content > div {
+        height : 100%;
+    	}
+    	
+    	.bottom-footer {
+	        bottom : 0;
+	        width : 100%;
+    	}
+	
+	</style>
+	
+	
 </head>
 <body>
 	
 	<div data-role="page" id="pagina1" data-add-back-btn="true">
 		
 		<div data-role="header" data-theme="a">
-			<h1>BANCO<wbr> DE<wbr> LA<wbr> REPÚBLICA</h1>
+			<h1>BANCO<wbr> DE LA<wbr> REPÚBLICA</h1>
 			<a href="index_1.html" data-icon="grid" data-iconpos="notext" data-corners="true" data-shadow="true" data-iconshadow="true" 
 					data-wrapperels="span" class="ui-btn-right" title="Version 2"></a>
 		</div>
 		
-		<div data-role="content" data-theme="b" align="center" class="jqm-content">				
+		<div data-role="content" data-theme="b" align="center" class="fit-content">				
 				
 			<img alt="Banco de la República" src="images/logo.png" />												
 								 
@@ -83,7 +109,7 @@
 			    
 			</div>			
 		</div>
-		<div data-role="footer" data-theme="a">
+		<div data-role="footer" data-theme="a" class="bottom-footer">
 			<h6>Derechos<wbr> Reservados</h6>
 		</div>
 		
