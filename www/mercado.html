@@ -13,7 +13,7 @@
 					  }
 	  );
 	  
-	  var mql = window.matchMedia("(orientation: portrait)");
+	  var mql = window.matchMedia("(orientation: landscape)");
 	  
 	  $(document).bind("mobileinit", function(){ 
 	
@@ -21,7 +21,10 @@
 		  if(mql.matches) {  
 		  	alert("Portrait orientation: "+mql.matches);
 		  } else {  
-		  	alert("Landscape orientation"+mql.matches);
+		  	alert("Landscape orientation: "+mql.matches);
+		  	alert("window.orientation: "+ window.orientation);
+		  	window.orientation = "landscape";
+		  	alert("window.orientation: "+ window.orientation);
 		  }
 	  
 	  
