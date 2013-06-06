@@ -13,25 +13,31 @@
 					  }
 	  );
 	  
-	  window.addEventListener(
-			  "orientationchange", function() {
-					// Announce the new orientation number
-					alert(window.orientation);
-				}, 
-				false);
+	  var mql = window.matchMedia("(orientation: portrait)");
+	  
+	  $(document).bind("mobileinit", function(){ 
+	
+		// If there are matches, we're in portrait
+		  if(mql.matches) {  
+		  	alert("Portrait orientation: "+mql.matches);
+		  } else {  
+		  	alert("Landscape orientation"+mql.matches);
+		  }
 	  
 	  
-	  $(window).bind("orientationchange", function(event){		
-		  if (event.orientation)		
-		    $("#contenido").html("Me han reorientado a " + event.orientation);
-		});
+	  });
 	  
-	  $(window).trigger("orientationchange");
+	  // Add a media query change listener
+	  mql.addListener(function(m) {
+	  	if(m.matches) {
+	  		alert("m.matches: "+m.matches+". Portrait");
+	  	}
+	  	else {
+	  		alert("m.matches: "+m.matches+". Landscape");
+	  	}
+	  });
+
 	  
-	  window.addEventListener("resize", function() {
-			// Get screen size (inner/outerWidth, inner/outerHeight)
-		  alert("resize");
-		}, false);
 	  
  	</script>
 	<script type="text/javascript" src="js/jquery.mobile.js"></script>
@@ -47,10 +53,9 @@
 		</div>
 		<div data-role="content">	
 			
-			Ejemplo que controla la rotaci&oacute;n del dispositivo movil.
-			<br /><br />
-  			<span id="contenido">Inicio de la Aplicación</span>
-			<br /><br />
+
+
+
 			<a data-inline="true" data-rel="back" data-theme="b" 
 				data-role="button" href="index.html" data-corners="false" data-shadow="true" data-iconshadow="false" data-wrapperels="span">
 				Volver</a>

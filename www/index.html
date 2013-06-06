@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Banco de la República</title>
-	<meta charset="ISO-8859-1">
-	<meta name="viewport" content="width=devide-width, user-scalable=no" />
+	<title>Banco de la RepÃºblica</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=devide-width, height=device-height, user-scalable=no" />
 	<link href="css/jquery.mobile.css" rel="stylesheet" type="text/css">
 	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="cordova-2.7.0.js"></script>
 	<script>
 	  $(document).bind("mobileinit", 
 					  function () {
@@ -13,6 +14,7 @@
 						$.mobile.ajaxEnabled = false;
 					  }
 	  );
+	  
  	</script>
 	<script type="text/javascript" src="js/jquery.mobile.js"></script>
 	
@@ -23,7 +25,7 @@
 	    }
 	    
 	    .fit-content {
-	        top : 44px;
+	        top : 55px;
 	        bottom : 44px;
 	        left : 0;
 	        right : 0;
@@ -47,14 +49,14 @@
 	<div data-role="page" id="pagina1" data-add-back-btn="true">
 		
 		<div data-role="header" data-theme="a">
-			<h1>BANCO<wbr> DE LA<wbr> REPÚBLICA</h1>
+			<h1>BANCO<wbr> DE LA<wbr> REPÃšBLICA</h1>
 			<a href="index_1.html" data-icon="grid" data-iconpos="notext" data-corners="true" data-shadow="true" data-iconshadow="true" 
 					data-wrapperels="span" class="ui-btn-right" title="Version 2"></a>
 		</div>
 		
 		<div data-role="content" data-theme="b" align="center" class="fit-content">				
 				
-			<img alt="Banco de la República" src="images/logo.png" />												
+			<img alt="Banco de la RepÃºblica" src="images/logo.png" />												
 								 
 			
 			<div data-role="collapsible-set" data-inset="false" data-theme="c" data-content-theme="d" data-collapsed-icon="arrow-r" 
@@ -69,8 +71,9 @@
 			    <div data-role="collapsible">
 			        <h3>Cambiaria</h3>
 			        <ul data-role="listview">
-			            <li><a href="trm.html" data-transition="slide" >TRM</a></li>
-			            <li><a href="plantilla.html" >Mercado</a></li>
+			        	<li><a href="plantilla.html" >Plantilla</a></li>
+			            <li><a href="trm.html" data-transition="slide" data-back=â€trueâ€ >TRM</a></li>
+			            <li><a href="mercado.html" >Mercado</a></li>
 			            <li><a href="#" >Opciones BanRep</a></li>
 			        </ul>
 			    </div>
@@ -79,23 +82,23 @@
 			        <h3>Monetaria</h3>
 			        <ul data-role="listview">
 			            <li><a href="#" data-rel="dialog" data-transition="slide">Indicadores</a></li>
-			            <li><a href="#" data-rel="dialog" data-transition="slide">Expansión</a></li>
-			            <li><a href="#" data-rel="dialog" data-transition="slide">Expansión 2</a></li>
-			            <li><a href="#" data-rel="dialog" data-transition="slide">Contracción</a></li>
+			            <li><a href="#" data-rel="dialog" data-transition="slide">ExpansiÃ³n</a></li>
+			            <li><a href="#" data-rel="dialog" data-transition="slide">ExpansiÃ³n 2</a></li>
+			            <li><a href="#" data-rel="dialog" data-transition="slide">ContracciÃ³n</a></li>
 			        </ul>
 			    </div>
 			    <div data-role="collapsible">
-			        <h3>Deuda Pública Primaria</h3>
+			        <h3>Deuda PÃºblica Primaria</h3>
 			        <ul data-role="listview">
-			            <li><a href="#" data-rel="dialog" data-transition="slide">Deuda Pública Primaria</a></li>
+			            <li><a href="#" data-rel="dialog" data-transition="slide">Deuda PÃºblica Primaria</a></li>
 			            <li><a href="#" data-rel="dialog" data-transition="slide">N-D</a></li>
 			        </ul>
 			    </div>
 			    <div data-role="collapsible">
-			        <h3>Deuda Pública Secundaria</h3>
+			        <h3>Deuda PÃºblica Secundaria</h3>
 			        <ul data-role="listview">
-			            <li><a href="#" data-rel="dialog" data-transition="slide">Deuda Pública Secundaria</a></li>
-			            <li><a href="#" data-rel="dialog" data-transition="slide">Mas Información</a></li>
+			            <li><a href="#" data-rel="dialog" data-transition="slide">Deuda PÃºblica Secundaria</a></li>
+			            <li><a href="#" data-rel="dialog" data-transition="slide">Mas InformaciÃ³n</a></li>
 			        </ul>
 			    </div>
 			    <div data-role="collapsible">
