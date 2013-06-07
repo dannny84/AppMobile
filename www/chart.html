@@ -154,6 +154,25 @@
 
               $('.jqplot-highlighter-tooltip').addClass('ui-corner-all')
         });
+        
+        window.addEventListener(
+  			  "orientationchange", function() {
+  					// Announce the new orientation number
+  					alert("window.orientation: "+window.orientation);
+  					
+  					if(window.orientation == 0){
+  						CambiarEstilo("contentId");  						
+  					}else{
+  						
+  					}
+  					
+  				}, 
+  				false);
+        
+        function CambiarEstilo(id) {
+        	var elemento = document.getElementById(id);
+        	elemento.className = "rotate";
+        }
 
 
     </script>
@@ -162,7 +181,7 @@
 <body>
 	<div data-role="page" id="pagina3">
 
-		<div data-role="content" data-theme="b" align="justify"  class="rotate">	
+		<div data-role="content" id="contentId" data-theme="b" align="justify">	
 		
 			<div id="example-content">			
 			    <div class="ui-widget ui-corner-all">
