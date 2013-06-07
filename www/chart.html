@@ -176,7 +176,7 @@
 		  	alert("window.orientation: "+window.orientation);			
 			
 			var orientation = window.orientation;
-		    var new_orientation = (orientation) ? 0 : 180 + orientation;
+		    var new_orientation = (orientation) ? 0 : 90 + orientation;
 		    $('body').css({
 		        "-webkit-transform": "rotate(" + new_orientation + "deg)"
 		    });
@@ -197,7 +197,7 @@
 <body>
 	<div data-role="page" id="pagina3">
 
-		<div data-role="content" id="contentId" data-theme="b" align="justify">	
+		<div data-role="content" id="contentId" data-theme="b" align="justify" class="rotate">	
 		
 			<div id="example-content">			
 			    <div class="ui-widget ui-corner-all">
