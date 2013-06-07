@@ -21,6 +21,8 @@
 	function setOrientation() {
 	    $('body').removeClass('portrait landscape').
 	        addClass(window.orientation ? 'landscape' : 'portrait');
+	    
+	    alert("window.orientation: "+window.orientation);
 	}
 
  	</script>
@@ -35,9 +37,7 @@
 			<a href="index.html" data-icon="bars" data-iconpos="notext" data-corners="true" data-shadow="true" data-iconshadow="true" 
 					data-wrapperels="span" class="ui-btn-right" title="Home"></a>
 		</div>
-		<div data-role="content">	
-			
-			<h1 id="orientation">orientationchange Not Supported on this Device.</h1>		
+		<div data-role="content">		
 
 
 			<a data-inline="true" data-rel="back" data-theme="b" 
