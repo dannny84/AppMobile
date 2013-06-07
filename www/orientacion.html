@@ -21,7 +21,7 @@
 	var ori = "landscape";
 	}
 
-	changeOrientation(ori);
+	changeOrientation("landscape");
 
 	// Orientation Change
 	// When orientation changes event is triggered
@@ -29,7 +29,7 @@
 	// landscape or portrait
 		
 	$('body').bind('orientationchange',function(event){
-		changeOrientation(event.orientation)
+		changeOrientation("landscape")
 	})
 
 	// Change the style dependengt on orientation
@@ -66,16 +66,16 @@
 	</style>
 </head>
 <body> 
-<div data-role="page">
-<div data-role="header">
-<h1>Orientation</h1>
-</div><!-- /header -->
-<div data-role="content">
-<div id="orientation" class="portrait"></div>
-</div><!-- /content -->
-<div data-role="footer">
-<h4></h4>
-</div><!-- /footer -->
-</div><!-- /page -->
+	<div data-role="page">
+		<div data-role="header">
+			<h1>Orientation</h1>
+		</div><!-- /header -->
+		<div data-role="content">
+			<div id="orientation" class="portrait"></div>
+		</div><!-- /content -->
+		<div data-role="footer">
+			<h4></h4>
+		</div><!-- /footer -->
+	</div><!-- /page -->
 </body>
 </html>
