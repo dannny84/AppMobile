@@ -3,6 +3,7 @@
 <head>
 	<title>Banco de la República</title>
 	<meta charset="UTF-8">
+	<!--meta http-equiv="Refresh" content="5"/-->
 	<meta name="viewport" content="width=devide-width, height=device-height, user-scalable=no" />
 	<link href="css/jquery.mobile.css" rel="stylesheet" type="text/css">
 	<script type="text/javascript" src="js/jquery.js"></script>
@@ -46,7 +47,7 @@
 </head>
 <body>
 	
-	<div data-role="page" id="pagina1" data-add-back-btn="true">
+	<div data-role="page" id="pagina1" align="justify">
 		
 		<div data-role="header" data-theme="a">
 			<h1>BANCO<wbr> DE LA<wbr> REPÚBLICA</h1>
@@ -67,14 +68,20 @@
 			            <li><a href="animatedChart.html" data-transition="slide" >Chart</a></li>
 			        </ul>
 			    </div>
+			    
+			    <div data-role="collapsible">
+			        <h3>Chart</h3>
+			        <ul data-role="listview">
+			            <li><a href="chart.html" data-transition="slide" >Chart</a></li>
+			        </ul>
+			    </div>
 			    		        
 			    <div data-role="collapsible">
 			        <h3>Cambiaria</h3>
 			        <ul data-role="listview">
 			        	<li><a href="plantilla.html" >Plantilla</a></li>
 			            <li><a href="trm.html" data-transition="slide" data-back=”true” >TRM</a></li>
-			            <li><a href="mercado.html" >Mercado</a></li>
-			            <li><a href="#" >Opciones BanRep</a></li>
+			            <li><a href="mercado.html" >Mercado</a></li>			            
 			        </ul>
 			    </div>
 			    

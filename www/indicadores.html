@@ -7,16 +7,21 @@
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script>
 	 
-	 
-	  
-	// Bind an event to window.orientationchange that, when the device is turned,
-	// gets the orientation and displays it to on screen.
-	$( window ).on( "orientationchange", function( event ) {
-	  $( "#orientation" ).text( "This device is in " + event.orientation + " mode!" );
-	});
-	 
-	// You can also manually force this event to fire.
-	$( window ).orientationchange();
+	  $(document).bind("mobileinit", 
+			  function () {
+		  		alert("Ingreso al metodo bind");
+				$.mobile.ajaxEnabled = false;
+				setOrientation();
+			  }
+		);
+	
+	
+
+	// Change the device orientation
+	function setOrientation() {
+	    $('body').removeClass('portrait landscape').
+	        addClass(window.orientation ? 'landscape' : 'portrait');
+	}
 
  	</script>
 	<script type="text/javascript" src="js/jquery.mobile.js"></script>
