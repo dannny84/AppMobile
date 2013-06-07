@@ -155,9 +155,10 @@
               $('.jqplot-highlighter-tooltip').addClass('ui-corner-all')
         });
         
-        window.addEventListener(
+       /* window.addEventListener(
   			  "orientationchange", function() {
   					// Announce the new orientation number
+  					
   					alert("window.orientation: "+window.orientation);
   					
   					if(window.orientation == 0){
@@ -167,12 +168,27 @@
   					}
   					
   				}, 
-  				false);
+  				false);*/
         
-        function CambiarEstilo(id) {
+        window.addEventListener("resize", function() {
+			// Get screen size (inner/outerWidth, inner/outerHeight)
+		  	alert("resize");
+		  	alert("window.orientation: "+window.orientation);			
+			
+			var orientation = window.orientation;
+		    var new_orientation = (orientation) ? 0 : 180 + orientation;
+		    $('body').css({
+		        "-webkit-transform": "rotate(" + new_orientation + "deg)"
+		    });
+						
+		}, false);        
+        
+        
+        
+       /* function CambiarEstilo(id) {
         	var elemento = document.getElementById(id);
         	elemento.className = "rotate";
-        }
+        }*/
 
 
     </script>
