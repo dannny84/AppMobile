@@ -11,7 +11,8 @@
 			  function () {
 		  		alert("Ingreso al metodo bind");
 				$.mobile.ajaxEnabled = false;
-				setOrientation();
+				window.orientation = 90;
+				alert("window.orientation: "+window.orientation);
 			  }
 		);
 	
@@ -20,9 +21,7 @@
 	// Change the device orientation
 	function setOrientation() {
 	    $('body').removeClass('portrait landscape').
-	        addClass(window.orientation ? 'landscape' : 'portrait');
-	    
-	    alert("window.orientation: "+window.orientation);
+	        addClass(window.orientation ? 'landscape' : 'portrait');	  	   
 	}
 
  	</script>
