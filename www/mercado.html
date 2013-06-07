@@ -12,31 +12,20 @@
 					  function () {
 						//Con esta funcion, me sirven los enlaces hacia las graficas
 						$.mobile.ajaxEnabled = false;
-						
-						// If there are matches, we're in portrait
-						  if(mql.matches) {  
-						  	alert("Portrait orientation: "+mql.matches);
-						  } else {  
-						  	alert("Landscape orientation: "+mql.matches);
-						  	alert("window.orientation: "+ window.orientation);
-						  	window.orientation = 90;
-						  	alert("window.orientation: "+ window.orientation);
-						  }
 					  }
+	  
+	  
 	  );
-	    
-	  // Add a media query change listener
-	  mql.addListener(function(m) {
-	  	if(m.matches) {
-	  		alert("m.matches: "+m.matches+". Portrait");
-	  	}
-	  	else {
-	  		alert("m.matches: "+m.matches+". Landscape");
-	  	}
-	  });
+	  
+	// Bind an event to window.orientationchange that, when the device is turned,
+	// gets the orientation and displays it to on screen.
+	$( window ).on( "orientationchange", function( event ) {
+	  $( "#orientation" ).text( "This device is in " + event.orientation + " mode!" );
+	});
+	 
+	// You can also manually force this event to fire.
+	$( window ).orientationchange();
 
-	  
-	  
  	</script>
 	<script type="text/javascript" src="js/jquery.mobile.js"></script>
 	<title>Banco de la República</title>
@@ -51,7 +40,7 @@
 		</div>
 		<div data-role="content">	
 			
-
+			<h1 id="orientation">orientationchange Not Supported on this Device.</h1>		
 
 
 			<a data-inline="true" data-rel="back" data-theme="b" 
