@@ -6,31 +6,25 @@
 	<link href="css/jquery.mobile.css" rel="stylesheet" type="text/css">
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script>
+	 var mql = window.matchMedia("(orientation: landscape)");
+	 
 	  $(document).bind("mobileinit", 
 					  function () {
 						//Con esta funcion, me sirven los enlaces hacia las graficas
 						$.mobile.ajaxEnabled = false;
+						
+						// If there are matches, we're in portrait
+						  if(mql.matches) {  
+						  	alert("Portrait orientation: "+mql.matches);
+						  } else {  
+						  	alert("Landscape orientation: "+mql.matches);
+						  	alert("window.orientation: "+ window.orientation);
+						  	window.orientation = 90;
+						  	alert("window.orientation: "+ window.orientation);
+						  }
 					  }
 	  );
-	  
-	  var mql = window.matchMedia("(orientation: landscape)");
-	  window.orientation = 90;
-	  
-	  $(document).bind("mobileinit", function(){ 
-	
-		// If there are matches, we're in portrait
-		  if(mql.matches) {  
-		  	alert("Portrait orientation: "+mql.matches);
-		  } else {  
-		  	alert("Landscape orientation: "+mql.matches);
-		  	alert("window.orientation: "+ window.orientation);
-		  	window.orientation = 90;
-		  	alert("window.orientation: "+ window.orientation);
-		  }
-	  
-	  
-	  });
-	  
+	    
 	  // Add a media query change listener
 	  mql.addListener(function(m) {
 	  	if(m.matches) {
