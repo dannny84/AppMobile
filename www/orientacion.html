@@ -21,7 +21,7 @@
 	var ori = "landscape";
 	}
 
-	changeOrientation("landscape");
+	changeOrientation(ori);
 
 	// Orientation Change
 	// When orientation changes event is triggered
@@ -29,7 +29,7 @@
 	// landscape or portrait
 		
 	$('body').bind('orientationchange',function(event){
-		changeOrientation("landscape")
+		changeOrientation(event.orientation)
 	})
 
 	// Change the style dependengt on orientation
