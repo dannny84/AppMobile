@@ -177,7 +177,7 @@
 		  	//alert("window.orientation: "+window.orientation);			
 			
 			var orientation = window.orientation;
-		    var new_orientation = (orientation) ? 0 : orientation;
+		    var new_orientation = (orientation) ? 0 : 180 + orientation;
 		    $('body').css({
 		        "-webkit-transform": "rotate(" + new_orientation + "deg)"
 		    });
