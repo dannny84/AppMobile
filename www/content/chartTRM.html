@@ -222,20 +222,20 @@ var currYear = [
 			if(window.orientation == 0){
 			window.orientation = 90;		
 			$('body').css({
-		        "-webkit-transform": "rotate(" + new_orientation + "deg)"
+		        "-webkit-transform": "rotate(0deg)"
 		    });			
 			}else{
 			window.orientation = 90;			
 			$('body').css({
-		        "-webkit-transform": "rotate(" + new_orientation + "deg)"
+		        "-webkit-transform": "rotate(0deg)"
 		    });
 			}
 			
-			var orientation = window.orientation;
+			/*var orientation = window.orientation;
 		    var new_orientation = (orientation) ? 0 : 270 + orientation;
 		    $('body').css({
 		        "-webkit-transform": "rotate(" + new_orientation + "deg)"
-		    });
+		    });*/
 						
 		}, false);    
 
