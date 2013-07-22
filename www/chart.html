@@ -65,6 +65,7 @@
 		//height: 200px;
 		//-webkit-translate:(50px, 100px); 
 		-webkit-transform: rotate(90deg);
+		-mozilla-transform: rotate(90deg);
 		
 		}
 
@@ -172,11 +173,11 @@
         
         window.addEventListener("resize", function() {
 			// Get screen size (inner/outerWidth, inner/outerHeight)
-		  	alert("resize");
+		  	//alert("resize");
 		  	alert("window.orientation: "+window.orientation);			
 			
 			var orientation = window.orientation;
-		    var new_orientation = (orientation) ? 0 : 90 + orientation;
+		    var new_orientation = (orientation) ? 0 : orientation;
 		    $('body').css({
 		        "-webkit-transform": "rotate(" + new_orientation + "deg)"
 		    });
