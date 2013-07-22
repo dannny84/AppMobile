@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <title>Banco de la República - Animated Chart</title>
+	<meta charset="ISO-8859-1">
+	<meta name="viewport" content="width=device-height, user-scalable=no" />
+	<link href="../css/jquery.mobile.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="../css/jquery.jqplot.css" />
+    <link type="text/css" rel="stylesheet" href="../css/shCoreDefault.css" />
+    <link type="text/css" rel="stylesheet" href="../css/shThemejqPlot.css" />  
+  	<link rel="stylesheet" type="text/css" href="../css/jquery-ui.css" />
+  	
+  	<script type="text/javascript" src="../js/jquery.js"></script>
+  	<script>
+		  $(document).bind("mobileinit", 
+						  function () {
+							//Con esta funcion, habilito los enlaces hacia las graficas
+							$.mobile.ajaxEnabled = false;
+
+							window.orientation = 1;
+						  }
+		  );
+ 	</script>
+  	<script type="text/javascript" src="..js/jquery.mobile.js"></script>
+  	
+  	
+	<script type="text/javascript" src="../js/jquery.jqplot.js"></script>
+	<script type="text/javascript" src="../js/shCore.js"></script>
+	<script type="text/javascript" src="../js/shBrushJScript.js"></script>
+	<script type="text/javascript" src="../js/shBrushXml.js"></script>
+	<script type="text/javascript" src="../js/jqplot.dateAxisRenderer.js"></script>
+	<script type="text/javascript" src="../js/jqplot.logAxisRenderer.js"></script>
+	<script type="text/javascript" src="../js/jqplot.canvasTextRenderer.js"></script>
+	<script type="text/javascript" src="../js/jqplot.canvasAxisTickRenderer.js"></script>
+	<script type="text/javascript" src="../js/jqplot.highlighter.js"></script>
+    
+    <style type="text/css">
+    
+        .jqplot-target {
+            margin: 20px;
+            height: device-width;
+            width: device-height;
+            color: #dddddd;
+        }
+
+        .ui-widget-content {
+            background: rgb(57,57,57);
+        }
+
+        table.jqplot-table-legend {
+            border: 0px;
+            background-color: rgba(100,100,100, 0.0);
+        }
+
+        .jqplot-highlighter-tooltip {
+            background-color: rgba(57,57,57, 0.9);
+            padding: 7px;
+            color: #dddddd;
+        }
+		
+		body {
+			background-color: #393939;
+		}
+		
+		.rotate{
+		//width: 200px;
+		//height: 200px;
+		//-webkit-translate:(50px, 100px); 
+		-webkit-transform: rotate(90deg);
+		-mozilla-transform: rotate(90deg);
+		
+		}
+
+    </style>
+    
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $.jqplot._noToImageButton = true;
+            var prevYear = [['2011-11-11 09:27:42 AM', 1969,5]];
+
+var currYear = [
+    ['2011-11-11 09:27:42 AM', 1969,5],
+    ['2011-11-11 09:27:48 AM', 1968,2],
+    ['2011-11-11 09:28:49 AM', 1968,6],
+    ['2011-11-11 09:28:52 AM', 1969,1],
+	['2011-11-11 09:29:50 AM', 1954,9],
+	['2011-11-11 09:30:52 AM', 1955,1],
+    ['2011-11-11 09:31:57 AM', 1955,2],
+    ['2011-11-11 09:32:04 AM', 1955,0],
+	['2011-11-11 09:33:42 AM', 1954,9],
+    ['2011-11-11 09:33:50 AM', 1952,6],
+    ['2011-11-11 09:34:49 AM', 1952,4],
+    ['2011-11-11 09:35:52 AM', 1955,8],
+	['2011-11-11 09:36:50 AM', 1960,9],
+	['2011-11-11 09:37:52 AM', 1969,1],
+    ['2011-11-11 09:38:57 AM', 1969,5],
+    ['2011-11-11 09:39:04 AM', 1969,5],
+	['2011-11-11 09:40:02 AM', 1961,5],
+    ['2011-11-11 09:41:48 AM', 1958,5],
+    ['2011-11-11 09:42:10 AM', 1953,3],
+    ['2011-11-11 09:42:30 AM', 1954,5],
+	['2011-11-11 09:42:50 AM', 1954,9],
+	['2011-11-11 09:43:52 AM', 1969,1],
+    ['2011-11-11 09:44:50 AM', 1970,9],
+    ['2011-11-11 09:45:04 AM', 1972,5],
+	['2011-11-11 09:45:42 AM', 1980,5],
+	['2011-11-11 09:46:52 AM', 1969,1],
+    ['2011-11-11 09:46:57 AM', 1969,2],
+	['2011-11-11 09:47:50 AM', 1989,9],
+	['2011-11-11 09:47:52 AM', 1990,1],
+	['2011-11-11 09:48:50 AM', 1991,9],
+	['2011-11-11 09:49:52 AM', 1992,1],
+    ['2011-11-11 09:50:04 AM', 1992,0],
+	['2011-11-11 09:51:42 AM', 1992,9],
+    ['2011-11-11 09:52:50 AM', 1993,6],
+    ['2011-11-11 09:53:48 AM', 1990,1],
+	['2011-11-11 09:54:04 AM', 1991,0],
+	['2011-11-11 09:54:42 AM', 1991,9],
+	['2011-11-11 09:54:50 AM', 1988,9],
+	['2011-11-11 09:55:52 AM', 1985,1],
+    ['2011-11-11 09:56:50 AM', 1984,6],
+    ['2011-11-11 09:57:49 AM', 1983,4],
+    ['2011-11-11 09:58:52 AM', 1978,8],
+    ['2011-11-11 09:59:57 AM', 1970,5],
+    ['2011-11-11 10:00:04 AM', 1969,5],
+	['2011-11-11 10:00:42 AM', 1961,5],
+    ['2011-11-11 10:01:48 AM', 1958,5],
+    ['2011-11-11 10:02:10 AM', 1953,3],
+    ['2011-11-11 10:03:30 AM', 1954,5],
+    ['2011-11-11 10:04:50 AM', 1954,9],
+	['2011-11-11 10:05:52 AM', 1945,1],
+    ['2011-11-11 10:06:57 AM', 1944,2],
+    ['2011-11-11 10:07:04 AM', 1949,0],
+	['2011-11-11 10:08:42 AM', 1955,9],
+    ['2011-11-11 10:09:50 AM', 1959,6],
+    ['2011-11-11 10:10:04 AM', 1956,5],
+	['2011-11-11 10:10:42 AM', 1961,5],
+    ['2011-11-11 10:11:48 AM', 1980,1],
+    ['2011-11-11 10:12:49 AM', 1977,6],
+    ['2011-11-11 10:13:02 AM', 1971,2]
+];
+
+            var plot1 = $.jqplot("chart1", [prevYear, currYear], {
+                seriesColors: ["rgba(78, 135, 194, 0.7)", "rgb(211, 235, 59)"],
+                highlighter: {
+                    show: true,
+                    sizeAdjust: 2,
+                    tooltipOffset: 1
+                },
+                grid: {
+                    background: 'rgba(57,57,57,0.0)',
+                    drawBorder: false,
+                    shadow: true,
+                    gridLineColor: '#666666',
+                    gridLineWidth: 1
+                },
+                legend: {
+                    show: false,
+                    placement: 'outside'
+                },
+                seriesDefaults: {
+                    rendererOptions: {
+                        smooth: false,
+                        animation: {
+                            show: true
+                        }
+                    },
+                    showMarker: false
+                },
+                series: [
+                    {
+                        fill: false
+                    },
+                    {
+                       
+                    }
+                ],
+                axesDefaults: {
+                    rendererOptions: {
+                        baselineWidth: 1.5,
+                        baselineColor: '#444444',
+                        drawBaseline: true
+                    }
+                },
+                axes: {
+                    xaxis: {
+                        renderer: $.jqplot.DateAxisRenderer,
+                        tickRenderer: $.jqplot.CanvasAxisTickRenderer,
+                        tickOptions: {
+                            formatString: '%H:%M',
+                            angle: -90,
+                            textColor: '#dddddd'
+                        },
+                        min: "2011-11-11 09:27:00 AM",
+                        max: "2011-11-11 10:13:02 AM",
+                        tickInterval: "5 minutes",
+                        drawMajorGridlines: false
+                    },
+                    yaxis: {
+                        rendererOptions: {
+                            minorTicks: 1
+                        },
+                        tickOptions: {
+                            formatString: "$%'d",
+                            showMark: false
+                        }
+                    }
+                }
+            });
+
+              $('.jqplot-highlighter-tooltip').addClass('ui-corner-all')
+        });
+	
+
+
+    </script>
+   
+</head>
+<body>
+	<div data-role="page" id="pagina3">
+		<div id="example-content" data-role="content" class="rotate" align="justify">			
+		    <div id="example-content">
+		        <div class="ui-widget-content ui-corner-bottom">
+		            <div id="chart1"></div>
+		        </div>
+		    </div>
+		</div>	        
+	</div>
+</body>
+</html>
