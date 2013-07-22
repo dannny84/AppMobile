@@ -214,6 +214,18 @@ var currYear = [
               $('.jqplot-highlighter-tooltip').addClass('ui-corner-all')
         });
 	
+	        window.addEventListener("resize", function() {
+			// Get screen size (inner/outerWidth, inner/outerHeight)
+		  	//alert("resize");
+		  	//alert("window.orientation: "+window.orientation);			
+			
+			var orientation = window.orientation;
+		    var new_orientation = (orientation) ? 0 : 270 + orientation;
+		    $('body').css({
+		        "-webkit-transform": "rotate(" + new_orientation + "deg)"
+		    });
+						
+		}, false);    
 
 
     </script>
