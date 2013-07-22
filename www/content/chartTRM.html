@@ -217,13 +217,19 @@ var currYear = [
 	        window.addEventListener("resize", function() {
 			// Get screen size (inner/outerWidth, inner/outerHeight)
 		  	//alert("resize");
-		  	//alert("window.orientation: "+window.orientation);			
+		  	alert("window.orientation: "+window.orientation);			
 			
-			var orientation = window.orientation;
+			if(window.orientation == 0){
+			window.orientation = 90;			
+			}else{
+			window.orientation = 90;			
+			}
+			
+			/*var orientation = window.orientation;
 		    var new_orientation = (orientation) ? 0 : 270 + orientation;
 		    $('body').css({
 		        "-webkit-transform": "rotate(" + new_orientation + "deg)"
-		    });
+		    });*/
 						
 		}, false);    
 
